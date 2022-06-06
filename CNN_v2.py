@@ -47,7 +47,7 @@ else:
 
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     print(model.summary())
-    history = model.fit(x_train, y_train, validation_data=(x_test, y_test_cat), epochs=5, batch_size=200)
+    history = model.fit(x_train, y_train, validation_data=(x_test, y_test_cat), epochs=1, batch_size=200)
 
     plt.plot(history.history['accuracy'])
     plt.show()
